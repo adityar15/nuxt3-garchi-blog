@@ -1,0 +1,4 @@
+<template>
+   <Page slug="/" />
+</template>
+
