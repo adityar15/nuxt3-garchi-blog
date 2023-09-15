@@ -61,3 +61,14 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+# Using this repo
+
+This repo is a starter kit and it is meant to be used for a new project. In case you want to integrate [Garchi CMS](https://garchi.co.uk) in your existing project, you can always use this repo as a reference to do so.
+
+To begin with provide your API key inside nuxt.config.ts -> runtimeConfig.
+
+Checkout server/utils/garchi.ts for helper functions.
+
+An example page component could be found at pages/garchidemo.vue
