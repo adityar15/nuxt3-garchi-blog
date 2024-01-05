@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import {GarchiSection} from "@/assets/types/garchi"
+import type {GarchiSection} from "@/assets/types/garchi"
 const props = defineProps<{
     section: GarchiSection
 }>()
