@@ -56,4 +56,4 @@ class GarchiHelper {
 
 }
 
-export default new GarchiHelper()
+export default GarchiHelper

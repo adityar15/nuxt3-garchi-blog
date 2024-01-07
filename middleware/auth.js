@@ -1,3 +1,9 @@
+
+const publicPaths = [
+  '/',
+  '/blog'
+]
+
 export default defineNuxtRouteMiddleware(async (to, from) => {
     // if (to.params.id === '1') {
     //   return abortNavigation()
@@ -10,7 +16,20 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     // }
     const {getUser} = useAuth()
     const user = await getUser()
-    if(!user)
+
+    let isPublicPath = false
+    
+    for(let i = 0; i < publicPaths.length; i++)
+    {
+      if(to.path.startsWith(publicPaths[i]))
+      {
+        isPublicPath = true
+        break
+      }
+    }
+   
+
+    if(!user && !isPublicPath)
     return navigateTo("/")
 
 
